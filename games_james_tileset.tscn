@@ -12,11 +12,6 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
-
 [sub_resource type="RectangleShape2D" id=4]
 
 custom_solver_bias = 0.0
@@ -47,9 +42,14 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=3]
 
-position = Vector2( -130, -100 )
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Node2D" type="Node"]
+
+_sections_unfolded = [ "Transform" ]
 
 [node name="pond top" type="Sprite" parent="." index="0"]
 
@@ -78,7 +78,6 @@ shape = SubResource( 1 )
 
 [node name="pond top right" type="Sprite" parent="." index="1"]
 
-editor/display_folded = true
 position = Vector2( 174, 110 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -140,7 +139,7 @@ bounce = 0.0
 
 position = Vector2( 3.37885, 3.19322 )
 scale = Vector2( 0.465074, 0.486875 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="pond left" type="Sprite" parent="." index="5"]
 
@@ -165,7 +164,7 @@ bounce = 0.0
 
 position = Vector2( 3.00097, 0.0578471 )
 scale = Vector2( 0.501408, 0.810247 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="pond bottom left" type="Sprite" parent="." index="6"]
 
@@ -190,7 +189,7 @@ bounce = 0.0
 
 position = Vector2( 3.56778, -3.33872 )
 scale = Vector2( 0.450541, 0.454174 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="pond bottom" type="Sprite" parent="." index="7"]
 
@@ -215,7 +214,7 @@ bounce = 0.0
 
 position = Vector2( 0.0767522, -3.05532 )
 scale = Vector2( 0.806613, 0.519575 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="pond bottom right" type="Sprite" parent="." index="8"]
 
@@ -241,7 +240,7 @@ bounce = 0.0
 
 position = Vector2( -3.76309, -3.28751 )
 scale = Vector2( 0.419861, 0.476423 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="pond right" type="Sprite" parent="." index="9"]
 
@@ -266,7 +265,7 @@ bounce = 0.0
 
 position = Vector2( -3.06306, -0.0289591 )
 scale = Vector2( 0.489521, 0.808897 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="pond center" type="Sprite" parent="." index="10"]
 
@@ -292,6 +291,38 @@ bounce = 0.0
 
 position = Vector2( 0.0378289, -0.0578869 )
 scale = Vector2( 0.794392, 0.799341 )
-shape = SubResource( 9 )
+shape = SubResource( 3 )
+
+[node name="pond top left connector" type="Sprite" parent="." index="11"]
+
+position = Vector2( 192, 144.069 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 17, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="pond top right connector2" type="Sprite" parent="." index="12"]
+
+position = Vector2( 209, 144.069 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 17, 17, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="pond top right connector3" type="Sprite" parent="." index="13"]
+
+position = Vector2( 209, 161.069 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 17, 34, 16, 16 )
+_sections_unfolded = [ "Region" ]
+
+[node name="pond bottom left connector4" type="Sprite" parent="." index="14"]
+
+position = Vector2( 192, 161.069 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 34, 16, 16 )
+_sections_unfolded = [ "Region" ]
 
 

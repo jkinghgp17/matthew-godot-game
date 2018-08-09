@@ -6,7 +6,7 @@ var grid_position = Vector2()
 onready var parent = get_parent()
 
 func _ready():
-	grid_size = OS.get_screen_size()
+	grid_size = Vector2(16*14, 16*9)
 	set_as_toplevel(true)
 	update_grid_position()
 	
